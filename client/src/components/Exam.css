@@ -1,0 +1,96 @@
+.input {
+    height: 40px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+  .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+  }
+
+  .button{
+    border-radius: 15px;
+    margin: 0px 5px;
+  }
+  b{
+    text-align: left;
+  }
+  .th{
+    width: 33%;
+  }
+  
+
+  .check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    appearance: none;
+    background-color: #bbb;
+    transition: all .3s;
+   }
+   
+   .check::before {
+    content: '';
+    position: absolute;
+    border: solid #fff;
+    display: block;
+    width: .3em;
+    height: .6em;
+    border-width: 0 .2em .2em 0;
+    z-index: 1;
+    opacity: 0;
+    right: calc(65% - .3em);
+    top: calc(75% - .6em);
+    transform: rotate(0deg);
+    transition: all .3s;
+    transform-origin: center center;
+   }
+   
+   .check:checked {
+    animation: a .3s ease-in forwards;
+    background-color: rgb(120, 190, 120);
+   }
+   
+   .check:checked::before {
+    opacity: 1;
+    transform: rotate(405deg);
+   }
+   
+   @keyframes a {
+    0% {
+     opacity: 1;
+     transform: scale(1) rotateY(0deg);
+    }
+   
+    50% {
+     opacity: 0;
+     transform: scale(.8) rotateY(180deg);
+    }
+   
+    100% {
+     opacity: 1;
+     transform: scale(1) rotateY(360deg);
+    }
+   }
+
+
+
+   .blink {
+    color:red;
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
