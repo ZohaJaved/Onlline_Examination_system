@@ -1,0 +1,112 @@
+.subjects-container {
+  padding: 10px;
+  background: linear-gradient(to bottom right, #a3dfe7, #96b7bb, #a3dfe7); /* Darker gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  border-top: 1px solid #142523;
+  border-radius: 12px;
+  transition: bottom 1s;
+}
+
+.subjects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.subject-card {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  width: 100%; /* Ensure the card takes full width of its parent */
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #e0e0e0; /* Slightly darker grey on hover */
+}
+
+.subject-card h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #283048; /* Dark blue text color */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff; /* White text to stand out against the gradient background */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .subjects-container {
+    height: 60vh;
+    padding: 20px;
+    justify-content: start;
+
+  }
+
+  .subjects-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .subject-card {
+    padding: 15px;
+  }
+
+  .subject-card h4 {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 775px) {
+  .subjects-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+  }
+
+  .subject-card {
+    padding: 10px;
+  }
+
+  .subject-card h4 {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .subjects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-card {
+    padding: 10px;
+  }
+
+  .subject-card h4 {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+}

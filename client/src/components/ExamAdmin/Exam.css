@@ -1,0 +1,89 @@
+.exam-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  overflow-y:visible;
+}
+.exam-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  overflow-y: hidden;
+}
+.exam-list-container {
+  flex: 0.65;
+  margin-right: 20px;
+  max-height: calc(100vh - 40px); /* Ensure it fits within the viewport */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+}
+.form-container {
+  flex: 0.35;
+  margin-left: 20px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Fix the form on the right side */
+  top: 20px; /* Adjust the top position as needed */
+} /* Table Styles */
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.exam-table th,
+.exam-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.exam-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+.exam-table td {
+  color: #555;
+} /* Button Styles */
+.action-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+.action-button:hover {
+  background-color: #0056b3;
+} /* Responsive Styles */
+@media (max-width: 768px) {
+  .exam-content {
+    flex-direction: column;
+  }
+  .exam-list-container,
+  .form-container {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .form-container {
+    position: static; /* Remove fixed position on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .exam-table th,
+  .exam-table td {
+    font-size: 0.875rem;
+    padding: 6px;
+  }
+  .action-button {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+}

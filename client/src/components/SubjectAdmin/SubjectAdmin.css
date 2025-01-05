@@ -1,0 +1,167 @@
+/* Container Styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  justify-items: center;
+  
+}
+
+.subject-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: 0;
+  height: 0px;
+  background: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.add-subject-button,
+.submit-button,
+.reset-button,
+.modify-button,
+.delete-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 4px 8px; /* Reduced padding */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.75rem; /* Reduced font size */
+  margin-right: 5px; /* Reduced margin */
+}
+
+.add-subject-button:hover,
+.submit-button:hover,
+.reset-button:hover,
+.modify-button:hover,
+.delete-button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Styles */
+.form-container {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Table Styles */
+.subjects-list-admin {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.subjects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.subjects-table th,
+.subjects-table td {
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  text-align: left;
+}
+
+.subjects-table th {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+.subjects-table td {
+  color: #555555;
+}
+
+/* No Subjects Container */
+.no-subjects-container {
+  text-align: center;
+  color: #777777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subject-container {
+    padding: 15px;
+  }
+
+  .main-container{
+    margin: 1rem;
+    padding: 0;
+  }
+
+  .add-subject-button,
+  .submit-button,
+  .reset-button,
+  .modify-button,
+  .delete-button {
+    font-size: 0.625rem; /* Further reduced font size */
+    padding: 4px 8px; /* Further reduced padding */
+  }
+
+  .input-field {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+
+  .subjects-table th,
+  .subjects-table td {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-container {
+    padding: 2px;
+  }
+
+  .main-container{
+    margin: 0.2rem;
+    padding: 0;
+  }
+
+  .add-subject-button,
+  .submit-button,
+  .reset-button,
+  .modify-button,
+  .delete-button {
+    font-size: 0.625rem; /* Further reduced font size */
+    padding: 2px 4px; /* Further reduced padding */
+  }
+
+  .input-field {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  .subjects-table th,
+  .subjects-table td {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+}

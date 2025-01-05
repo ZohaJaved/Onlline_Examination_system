@@ -1,0 +1,67 @@
+.performance-page {
+  background: linear-gradient(to bottom right, #a3dfe7, #96b7bb, #a3dfe7);
+  width: 100%;
+  /* margin: 2px; */
+  border: 1px solid #142523;
+  border-radius: 12px;
+  transition: bottom 1s;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.performance-table {
+  background-color: #f5f5f5;
+  color: #142523;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.performance-table th, .performance-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+
+.performance-table th {
+  background-color: #5e959b;
+  color: white;
+}
+
+.performance-table td {
+  color: #333;
+}
+
+.performance-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .performance-page {
+    height: auto;
+    padding: 2px;
+  }
+
+  .performance-table {
+    width: 100%;
+  }
+  .performance-table th, .performance-table td {
+    padding: 2px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .performance-table th, .performance-table td {
+    padding: 2px;
+  }
+
+  .performance-table {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+}

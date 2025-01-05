@@ -1,0 +1,39 @@
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+a{
+    font-size: 1rem;
+    padding: 12px;
+}
+
+@media (max-width:768px){
+    h1{
+        font-size: 1.2 rem;
+        font-weight: 400;
+    }
+    a{
+        font-size: 1rem;
+        padding: 3px;
+    }
+    .flex {
+        flex-wrap: wrap; 
+        justify-content: center; 
+      }
+}
+
+@media (max-width: 480px) {
+    h1 {
+      font-size: 0.6rem; 
+      font-weight: 300;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    a {
+      font-size: 0.6rem; 
+      padding:2px
+    }
+      div {
+gap: 8px; 
+}
+  }

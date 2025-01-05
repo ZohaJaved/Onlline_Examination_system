@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
-import EditForm from "./EditForm";
-import DisplayView from "./DisplayView"
+import EditForm from "./SubjectEditAdmin/EditForm";
+import DisplayView from "./SubjectListAdmin/SubjectList"
 
 function SubjectEntry(props){
   const subject=props.subject;

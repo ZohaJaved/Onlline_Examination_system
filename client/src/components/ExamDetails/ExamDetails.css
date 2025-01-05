@@ -1,0 +1,88 @@
+/* Main Container */
+.exam-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: #d7e7f1;
+    padding-top: calc(70px + 1rem) ;
+  }
+  
+  /* Card Styling */
+  .exam-card {
+    background:linear-gradient(to bottom right, #9accd3, #96b7bb,#9accd3);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 32px;
+    width: 90%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+  }
+  
+  /* Title */
+  .exam-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /* Table */
+  .exam-table {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .exam-label {
+    padding: 12px 24px;
+    color: black;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .exam-value {
+    padding: 12px 0;
+    color: black;
+  }
+  
+  .exam-table tr:not(:last-child) {
+    border-bottom: 1px solid #1a202c;
+  }
+  
+  /* Note */
+  .exam-note {
+    color: black;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /* Button */
+  .exam-button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #3182ce;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .exam-button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* No Exam Message */
+  .no-exam-message {
+    margin-top: 80px;
+    font-size: 1.125rem;
+    color: #4a5568;
+    text-align: center;
+  }
+  

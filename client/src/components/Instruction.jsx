@@ -3,10 +3,10 @@ import React from "react"
 function Instruction(props){
     const list = {
         textAlign:"left",
-        marginLeft:"33%"
+        marginLeft:""
     };
     return(
-        <div>
+        <div className="mb-3">
       <h2 id="exam-format">Exam Instruction:</h2>
         <ul style={list}>
             <li>You will be asked {props.numOfQues} questions one after another.</li>

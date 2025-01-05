@@ -4,9 +4,6 @@ import { useEffect,useState } from "react";
 function Timer(props){
     //formatted time useState to display remaining time in min and sec
     const [formattedTime, setFormattedTime] = useState("");
-    
-
-    
     function TimeFormatter(seconds){
         const minutes=Math.floor(seconds/60)
         const secondsRemaining=seconds%60;
