@@ -23,22 +23,23 @@ function Subjects(props) {
   }, [getSubjects]);
 
   return (
-    <div className="subjects-container " style={{marginTop:"0"}}>
+    <div className="subjects-container " style={{marginTop:"0",justifyItems:'flex-start',marginTop:'20px'}}>
       {" "}
       {subjects && subjects.length > 0 ? (
         <div>
-        <h1 className="mb-2 text-black">List of Exams</h1>
+        <h1 className="mb-2 text-black" style={{fontSize:'xx-large'}}>List of Exams</h1>
         <div className="subjects-list">
           {" "}
           {subjects.map((subject, index) => (
             <div
               key={index}
+              style={{marginTop:'20px'}}
               className="subject-card"
               onClick={() => navigate(`/exam/${subject}`)}
             >
               {" "}
               <FontAwesomeIcon icon={faBook} className="subject-icon" color="black" />
-              <h4>{subject}</h4>{" "}
+              <h4 >{subject}</h4>{" "}
             </div>
           ))}{" "}
         </div>

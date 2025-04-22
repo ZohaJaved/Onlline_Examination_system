@@ -25,10 +25,15 @@ const PerformancePage = () => {
     return <div>Loading...</div>;
   }
 
+  if(performanceData.length===0){
+    return(<h1 style={{fontSize:'xxx-large',color:'black'}}>Not Appeared in any exams yet</h1>)
+  }
+
   return (
-    <div className="performance-page ">
-      <h1 style={{color:'black',marginTop:'2rem'}}>Performance and Grading</h1>
-      <table className='performance-table mt-6' style={{width:'90%', backgroundColor:'#f5f5f5'}}>
+    <div className="performance-page " style={{height:'500px'}}>
+      <h1 style={{color:'black',marginTop:'2rem' ,fontSize:'xxx-large'}}>Performance and Grading</h1>
+      <div style={{height:'500px'}}> 
+      <table className='performance-table mt-6' style={{ backgroundColor:'#f5f5f5'}}>
         <thead>
           <tr>
             <th>Roll Number</th>
@@ -58,6 +63,7 @@ const PerformancePage = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

@@ -67,7 +67,7 @@ function ExamSub({ setExamStart }) {
   if (hasAppeared) {
     return <div className="exam-container">
       <Navbar/>
-      <h1 className="text-black mb-4">You have already completed this exam.</h1>
+      <h1 className="text-black mb-4" style={{fontStyle:'italic'}}>You have already completed this exam.</h1>
       <button className="nav-button" onClick={()=>navigate('/StudentHome')}>Attempt other exams</button>
       </div>;
   }

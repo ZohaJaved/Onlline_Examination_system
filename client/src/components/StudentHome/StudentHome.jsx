@@ -57,18 +57,18 @@ function StudentHome() {
   };
 
   return (
-    <div className="studentHome-container">
-      {" "}
-      <Navbar showLogout={true} />{" "}
-      <div className="studentHome-content">
+    <div className="studentHome-container" style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+    <Navbar showLogout={true} style={{ height: "100px" }} />
+    <div className="studentHome-content" style={{ flex: 1 }}>
         {" "}
-        <center>
+        <center style={{width:'100%', height:'100%'}}>
           {" "}
-          <h1>
+          <div style={{display:'flex', flexDirection:'column'}}>
+          <h1 style={{height:'120px' , display:'flex' ,justifyContent:'center' , alignItems:'center'}}>
             {" "}
-            {studentDetail && <h1 className="text-black">Welcome {studentDetail.userName}</h1>}{" "}
+            {studentDetail && <h1 className="text-black" style={{width:'100%' ,fontSize:'xxx-large'}} >Welcome {studentDetail.userName}</h1>}{" "}
           </h1>{" "}
-          <div className="buttons-container">
+          <div className="buttons-container" style={{flex:'1'}}>
             {" "}
             <button
               onClick={() => setActive("subjects")}
@@ -89,7 +89,8 @@ function StudentHome() {
               Performance And Grading{" "}
             </button>{" "}
           </div>{" "}
-          <div className="tab-content"> {renderTabContent()} </div>{" "}
+          <div className="tab-content" style={{height:'500px'}}> {renderTabContent()} </div>{" "}
+          </div>
         </center>{" "}
       </div>{" "}
     </div>

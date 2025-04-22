@@ -43,39 +43,99 @@ function AdminHome() {
     }
   };
 
-  return (
-    <div className="AdminHome" style={{height:'100vh'}}>
-      {" "}
-      <Navbar showLogout={true} /> <h2>Main Menu</h2>{" "}
-      <div className="admin-navbar-container">
-        {" "}
-        <button
-          onClick={() => setActive("exam")}
-          className={activeTab === "exam" ? "selected" : ""}
+  // return (
+  //   <div className="AdminHome" style={{height:'100vh'}}>
+  //     {" "}
+  //     <Navbar showLogout={true} /> <h2>Main Menu</h2>{" "}
+  //     <div className="admin-navbar-container">
+  //       {" "}
+  //       <button
+  //         onClick={() => setActive("exam")}
+  //         className={activeTab === "exam" ? "selected" : ""}
+  //       >
+  //         Exam
+  //       </button>{" "}
+  //       <button
+  //         onClick={() => setActive("subject")}
+  //         className={activeTab === "subject" ? "selected" : ""}
+  //       >
+  //         Subject
+  //       </button>{" "}
+  //       <button
+  //         onClick={() => setActive("questions")}
+  //         className={activeTab === "questions" ? "selected" : ""}
+  //       >
+  //         Questions
+  //       </button>{" "}
+  //       <button
+  //         onClick={() => setActive("teacher")}
+  //         className={activeTab === "teacher" ? "selected" : ""}
+  //       >
+  //         Teacher
+  //       </button>{" "}
+  //     </div>{" "}
+  //      {renderTabContent()} 
+  //   </div>
+  // );
+
+  
+    return (
+      <div className="AdminHome" style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+        <Navbar showLogout={true} />
+        <div style={{display:'flex',flexDirection:'column'}}>
+        <div
+          className="admin-navbar-container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "1rem",
+            marginTop: "1rem",
+            flexWrap: "wrap",
+          }}
         >
-          Exam
-        </button>{" "}
-        <button
-          onClick={() => setActive("subject")}
-          className={activeTab === "subject" ? "selected" : ""}
+          
+          <button
+            onClick={() => setActive("exam")}
+            className={activeTab === "exam" ? "selected" : ""}
+          >
+            Exam
+          </button>
+          <button
+            onClick={() => setActive("subject")}
+            className={activeTab === "subject" ? "selected" : ""}
+          >
+            Subject
+          </button>
+          <button
+            onClick={() => setActive("questions")}
+            className={activeTab === "questions" ? "selected" : ""}
+          >
+            Questions
+          </button>
+          <button
+            onClick={() => setActive("teacher")}
+            className={activeTab === "teacher" ? "selected" : ""}
+          >
+            Teacher
+          </button>
+        </div>
+  
+        {/* Render the heading and content below the buttons */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            flex: 1,
+            justifyContent: activeTab ? "flex-start" : "center",
+          }}
         >
-          Subject
-        </button>{" "}
-        <button
-          onClick={() => setActive("questions")}
-          className={activeTab === "questions" ? "selected" : ""}
-        >
-          Questions
-        </button>{" "}
-        <button
-          onClick={() => setActive("teacher")}
-          className={activeTab === "teacher" ? "selected" : ""}
-        >
-          Teacher
-        </button>{" "}
-      </div>{" "}
-       {renderTabContent()} 
-    </div>
-  );
+          
+          {renderTabContent()}
+        </div>
+        </div>
+      </div>
+    );
+
 }
 export default AdminHome;

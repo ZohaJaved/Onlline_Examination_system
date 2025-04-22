@@ -20,26 +20,29 @@ function Navbar(props) {
       left: 0,
       right: 0,
       zIndex: 10,
-      backgroundColor: 'black',
-      borderBottom: '1px solid #33353F',
+      backgroundColor: '#554444',
+      // borderBottom: '1px solid #33353F',
       width: '100%',
-      height: '70px', // Fixed height for desktop view
+      height: '100px', // Fixed height for desktop view
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      margin:'0',
+      marginBottom:'5px'
     }}>
       <div style={{
-        margin: '0 auto',
+        margin:'0 20px',
+        // marginBottom:'15px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        maxWidth: '1200px',
+        // maxWidth: '1200px',
         padding: '0 8px',
         width: '100%',
       }}>
         <div style={{ flexShrink: 0, justifyContent:'center', alignItems:'center'}}>
           <h1 style={{
-            // fontSize: '1.5rem', // Default font size
+            fontSize: '1.5rem', // Default font size
             // fontWeight: '600',
             color: 'white',
             whiteSpace: 'nowrap',

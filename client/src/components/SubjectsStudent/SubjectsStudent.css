@@ -2,7 +2,7 @@
   padding: 10px;
   background: linear-gradient(to bottom right, #a3dfe7, #96b7bb, #a3dfe7); /* Darker gradient */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   height: 70vh;
